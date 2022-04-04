@@ -13,6 +13,14 @@ public class iOSPlugin : MonoBehaviour
     private static extern void _IncrementValue();
     [DllImport("__Internal")]
     private static extern int _GetValue();
+   [DllImport("__Internal")]
+    private static extern void _InitLocation();
+   [DllImport("__Internal")]
+    private static extern void _FetchNetworkInfo();
+    [DllImport("__Internal")]
+    private static extern string _GetSSID();
+    [DllImport("__Internal")]
+    private static extern int _GetSignalStrength();
 
     public static void ShowAlert(string title, string message)
     {
@@ -27,6 +35,24 @@ public class iOSPlugin : MonoBehaviour
         int val = _GetValue();
         return val;
     }
+    public static void InitLocation()
+    {
+        _InitLocation();
+    }
+    public static void FetchNetworkInfo()
+    {
+        _FetchNetworkInfo();
+    }
+    public static string GetSSID()
+    {
+        string val = _GetSSID();
+        return val;
+    }
+    public static int GetRSSI()
+    {
+        int val = _GetSignalStrength();
+        return val;
+    }
 #else
     public static void ShowAlert(string title, string message)
     {
@@ -39,6 +65,22 @@ public class iOSPlugin : MonoBehaviour
     public static int GetValue()
     {
         Debug.Log("GetValue is only supported on iOS");
+    }
+    public static void InitLocation()
+    {
+        Debug.Log("InitLocation is only supported on iOS");
+    }
+    public static void FetchNetworkInfo()
+    {
+        Debug.Log("FetchNetworkInfo is only supported on iOS");
+    }
+    public static string GetSSID()
+    {
+        Debug.Log("GetSSID is only supported on iOS");
+    }
+    public static int GetRSSI()
+    {
+        Debug.Log("GetRSSI is only supported on iOS");
     }
 #endif
 }
