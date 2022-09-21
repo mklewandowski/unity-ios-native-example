@@ -65,6 +65,7 @@ public class iOSPlugin : MonoBehaviour
     public static int GetValue()
     {
         Debug.Log("GetValue is only supported on iOS");
+        return 0;
     }
     public static void InitLocation()
     {
@@ -77,10 +78,12 @@ public class iOSPlugin : MonoBehaviour
     public static string GetSSID()
     {
         Debug.Log("GetSSID is only supported on iOS");
+        return "";
     }
     public static int GetRSSI()
     {
         Debug.Log("GetRSSI is only supported on iOS");
+        return 0;
     }
 #endif
 }
