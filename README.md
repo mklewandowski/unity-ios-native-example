@@ -1,10 +1,10 @@
 # unity-ios-native-example
-An example project showing integration of iOS native code in Unity. This project is created using Unity version 2021.3.3f1. This project uses native iOS code to show an alert; store, modify, and retrieve a static variable from a native iOS class; and perform basic location and network actions.
+An example project showing integration of iOS native code in Unity. This project is created using Unity version 2021.3.15f1. This project uses native iOS code to show an alert; store, modify, and retrieve a static variable from a native iOS class; and perform basic location and network actions.
 
 ## Running locally
 Use the following steps to run locally:
 1. Clone this repo
-2. Open repo folder using Unity 2021.3.3f1
+2. Open repo folder using Unity 2021.3.15f1
 3. Install TextMesh Pro
 
 ## Building
@@ -21,7 +21,7 @@ When building and deploying in Xcode, the following steps are needed:
 ```
 
 ## Development Tools
-- Created using Unity 2021.3.3f1
+- Created using Unity 2021.3.15f1
 - Code edited using Visual Studio Code
 
 
